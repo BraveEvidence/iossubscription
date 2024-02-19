@@ -1,0 +1,5 @@
+subscription MyUserSubscription {
+  newUser {
+    name
+  }
+}

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,14 @@
 		AB3DFDA82B830BB500614DF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3DFDA62B830BB500614DF7 /* Main.storyboard */; };
 		AB3DFDAA2B830BB700614DF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3DFDA92B830BB700614DF7 /* Assets.xcassets */; };
 		AB3DFDAD2B830BB700614DF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3DFDAB2B830BB700614DF7 /* LaunchScreen.storyboard */; };
+		AB3DFDB62B830C1800614DF7 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = AB3DFDB52B830C1800614DF7 /* Apollo */; };
+		AB3DFDB82B830C1800614DF7 /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = AB3DFDB72B830C1800614DF7 /* ApolloWebSocket */; };
+		AB3DFDBB2B830C7800614DF7 /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = AB3DFDBA2B830C7800614DF7 /* schema.graphqls */; };
+		AB3DFDBD2B830C9400614DF7 /* MyUserSubscription.graphql in Resources */ = {isa = PBXBuildFile; fileRef = AB3DFDBC2B830C9400614DF7 /* MyUserSubscription.graphql */; };
+		AB3DFDC02B830CF500614DF7 /* MyUserAPI in Frameworks */ = {isa = PBXBuildFile; productRef = AB3DFDBF2B830CF500614DF7 /* MyUserAPI */; };
+		AB3DFDC32B830D1B00614DF7 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3DFDC22B830D1B00614DF7 /* Network.swift */; };
+		AB3DFDC72B830EFC00614DF7 /* NetworkInterceptorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3DFDC62B830EFC00614DF7 /* NetworkInterceptorProvider.swift */; };
+		AB3DFDC92B830F6D00614DF7 /* AuthorizationInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3DFDC82B830F6D00614DF7 /* AuthorizationInterceptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,11 @@
 		AB3DFDA92B830BB700614DF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB3DFDAC2B830BB700614DF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB3DFDAE2B830BB700614DF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB3DFDBA2B830C7800614DF7 /* schema.graphqls */ = {isa = PBXFileReference; lastKnownFileType = file; name = schema.graphqls; path = graphql/schema.graphqls; sourceTree = SOURCE_ROOT; };
+		AB3DFDBC2B830C9400614DF7 /* MyUserSubscription.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = MyUserSubscription.graphql; sourceTree = "<group>"; };
+		AB3DFDC22B830D1B00614DF7 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		AB3DFDC62B830EFC00614DF7 /* NetworkInterceptorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterceptorProvider.swift; sourceTree = "<group>"; };
+		AB3DFDC82B830F6D00614DF7 /* AuthorizationInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationInterceptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +44,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB3DFDC02B830CF500614DF7 /* MyUserAPI in Frameworks */,
+				AB3DFDB62B830C1800614DF7 /* Apollo in Frameworks */,
+				AB3DFDB82B830C1800614DF7 /* ApolloWebSocket in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +58,7 @@
 			children = (
 				AB3DFD9F2B830BB500614DF7 /* myfourthapp */,
 				AB3DFD9E2B830BB500614DF7 /* Products */,
+				AB3DFDC12B830D0000614DF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +73,7 @@
 		AB3DFD9F2B830BB500614DF7 /* myfourthapp */ = {
 			isa = PBXGroup;
 			children = (
+				AB3DFDB92B830C6600614DF7 /* graphql */,
 				AB3DFDA02B830BB500614DF7 /* AppDelegate.swift */,
 				AB3DFDA22B830BB500614DF7 /* SceneDelegate.swift */,
 				AB3DFDA42B830BB500614DF7 /* ViewController.swift */,
@@ -63,8 +81,27 @@
 				AB3DFDA92B830BB700614DF7 /* Assets.xcassets */,
 				AB3DFDAB2B830BB700614DF7 /* LaunchScreen.storyboard */,
 				AB3DFDAE2B830BB700614DF7 /* Info.plist */,
+				AB3DFDC22B830D1B00614DF7 /* Network.swift */,
+				AB3DFDC62B830EFC00614DF7 /* NetworkInterceptorProvider.swift */,
+				AB3DFDC82B830F6D00614DF7 /* AuthorizationInterceptor.swift */,
 			);
 			path = myfourthapp;
+			sourceTree = "<group>";
+		};
+		AB3DFDB92B830C6600614DF7 /* graphql */ = {
+			isa = PBXGroup;
+			children = (
+				AB3DFDBA2B830C7800614DF7 /* schema.graphqls */,
+				AB3DFDBC2B830C9400614DF7 /* MyUserSubscription.graphql */,
+			);
+			path = graphql;
+			sourceTree = "<group>";
+		};
+		AB3DFDC12B830D0000614DF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +120,11 @@
 			dependencies = (
 			);
 			name = myfourthapp;
+			packageProductDependencies = (
+				AB3DFDB52B830C1800614DF7 /* Apollo */,
+				AB3DFDB72B830C1800614DF7 /* ApolloWebSocket */,
+				AB3DFDBF2B830CF500614DF7 /* MyUserAPI */,
+			);
 			productName = myfourthapp;
 			productReference = AB3DFD9D2B830BB500614DF7 /* myfourthapp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +153,10 @@
 				Base,
 			);
 			mainGroup = AB3DFD942B830BB500614DF7;
+			packageReferences = (
+				AB3DFDB42B830C1800614DF7 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				AB3DFDBE2B830CF500614DF7 /* XCLocalSwiftPackageReference "MyUserAPI" */,
+			);
 			productRefGroup = AB3DFD9E2B830BB500614DF7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +171,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB3DFDBD2B830C9400614DF7 /* MyUserSubscription.graphql in Resources */,
+				AB3DFDBB2B830C7800614DF7 /* schema.graphqls in Resources */,
 				AB3DFDAD2B830BB700614DF7 /* LaunchScreen.storyboard in Resources */,
 				AB3DFDAA2B830BB700614DF7 /* Assets.xcassets in Resources */,
 				AB3DFDA82B830BB500614DF7 /* Main.storyboard in Resources */,
@@ -140,7 +188,10 @@
 			files = (
 				AB3DFDA52B830BB500614DF7 /* ViewController.swift in Sources */,
 				AB3DFDA12B830BB500614DF7 /* AppDelegate.swift in Sources */,
+				AB3DFDC72B830EFC00614DF7 /* NetworkInterceptorProvider.swift in Sources */,
+				AB3DFDC32B830D1B00614DF7 /* Network.swift in Sources */,
 				AB3DFDA32B830BB500614DF7 /* SceneDelegate.swift in Sources */,
+				AB3DFDC92B830F6D00614DF7 /* AuthorizationInterceptor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +414,41 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		AB3DFDBE2B830CF500614DF7 /* XCLocalSwiftPackageReference "MyUserAPI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = MyUserAPI;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AB3DFDB42B830C1800614DF7 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB3DFDB52B830C1800614DF7 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB3DFDB42B830C1800614DF7 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		AB3DFDB72B830C1800614DF7 /* ApolloWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB3DFDB42B830C1800614DF7 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloWebSocket;
+		};
+		AB3DFDBF2B830CF500614DF7 /* MyUserAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MyUserAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB3DFD952B830BB500614DF7 /* Project object */;
 }

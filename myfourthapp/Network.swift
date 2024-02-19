@@ -16,7 +16,7 @@ class Network {
         let transport = RequestChainNetworkTransport(interceptorProvider: DefaultInterceptorProvider(client: client, shouldInvalidateClientOnDeinit: true, store: store), endpointURL: url)
 
         let webSocket = WebSocket(
-            url: URL(string: "wss://localhost:4000/graphql")!,
+            url: URL(string: "ws://localhost:4000/graphql")!,
             protocol: .graphql_ws
         )
 
